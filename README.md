@@ -20,3 +20,34 @@ Activating virtual envirnment
 ```
 Install requirments file
 pip install -r requirments.txt
+
+1. HEROKU_EMAIL = syedsajjad62@gmail.com
+2. HEROKU_API  = 6eae8a9d-b4a5-495a-936e-8a57753e40bb
+3. HEROKU_APP_NAME = mlregression62
+
+BUILD DOCKER IMAGE
+```
+docker build -t <image_name>:<tagname> .
+```
+
+
+> note: Image name for docker must be lowercase
+
+To list docker images
+```
+docker images
+```
+
+TO Run Docker image
+```
+docker run -p 5000:5000 -e PORT=5000 50e0dff5595c
+```
+
+TO stop running continer
+```
+docker ps
+```
+To stop docker container
+```
+docker stop <container_id>
+```
