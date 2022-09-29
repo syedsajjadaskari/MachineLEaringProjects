@@ -8,3 +8,13 @@ Software and Account Requirments,
 3. [VS code IDE](https://code.visualstudio.com/)
 4. [git cli](https://git-scm.com/book/en/v2/Getting-Started-The-Command-Line)
 
+creating virtual envirnment
+```
+python3 -m venev ./venv
+```
+Activating virtual envirnment
+```
+. venv/bin/activate
+```
+
+pip install -r requirments.txt
