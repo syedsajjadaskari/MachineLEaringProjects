@@ -22,7 +22,7 @@ Install requirments file
 pip install -r requirments.txt
 
 1. HEROKU_EMAIL = syedsajjad62@gmail.com
-2. HEROKU_API  = 6eae8a9d-b4a5-495a-936e-8a57753e40bb
+2. HEROKU_API  = <>
 3. HEROKU_APP_NAME = mlregression62
 
 BUILD DOCKER IMAGE
@@ -43,7 +43,7 @@ TO Run Docker image
 docker run -p 5000:5000 -e PORT=5000 50e0dff5595c
 ```
 
-TO stop running continer
+TO check running continer
 ```
 docker ps
 ```
