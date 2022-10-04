@@ -1,31 +1,26 @@
-from setuptools import setup
-from typing import List
+from setuptools import setup, find_packages
 
-REQUIRMENTS_FILE_NAME = "requirments.txt"
+REQUIREMENT_FILE_NAME = "requirments.txt"
+REMOVE_PACKAGE = "-e ."
 
-def get_requirmnets_details()->List(str):
-    """
-    this function is going to return the function in requirments
-    
-    return this function is going to retunt list of library whic contains
-    library in requirments.txt file """
-    with open(REQUIRMENTS_FILE_NAME) as requirment_file:
-        return requirment_file.readlines()
-    
 
-NAME = "house-predictor",
-VERSIONS="0.0.1",
-AUTHOR = "SYED SAJJAD ASKARI", 
-DESCRIPTION = "this is the first machine learing projects"
-PACKAGES=["housing"]
+def get_requirement_list(requirement_file_name=REQUIREMENT_FILE_NAME) -> list:
+    try:
+        requirement_list = None
+        with open(requirement_file_name) as requirement_file:
+            requirement_list = [requirement.replace("\n", "") for requirement in requirement_file]
+            requirement_list.remove(REMOVE_PACKAGE)
+        return requirement_list
+    except Exception as e:
+        raise e
+
 
 setup(
-    name = NAME,
-    version=VERSIONS,
-    author = AUTHOR,
-    description=DESCRIPTION,
-    package = PACKAGES,
-    install_requirments = get_requirmnets_details()
-
+    name="Housing price prediction",
+    license="MIT",
+    version="0.0.0",
+    description="Project has been completed.",
+    author="Syed Sajjad Askari",
+    packages=find_packages(),
+    install_requires=get_requirement_list()
 )
-

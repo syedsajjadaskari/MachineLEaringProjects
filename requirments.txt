@@ -1,5 +1,7 @@
-numpy
 Flask
+scikit-learn
+scipy 
+PyYAML
 gunicorn
-sklearn
 pandas
+-e .
